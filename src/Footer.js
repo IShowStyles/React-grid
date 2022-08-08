@@ -3,7 +3,7 @@ export default function Footer(){
         <>
             <footer className="footer">
                 <div className="container">
-                    <h1>
+                    <h1 className="footer-title">
                         FOOTER
                     </h1>
                 </div>

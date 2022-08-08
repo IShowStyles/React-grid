@@ -1,4 +1,5 @@
 #root {
+    font-family: 'Oswald', sans-serif;
     padding: 5px;
     display: grid;
     grid-gap: 7px;
@@ -10,23 +11,158 @@
                         "footer footer footer footer footer";
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
+
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap');
+
 .header {
-    border: 1px solid black;
     grid-area: header;
+    align-items: center;
+}
+
+.header > div > h1 {
+    padding-left: 20px;
+}
+
+.header,
+.footer {
+    border: 2px solid black;
+    display: flex;
+}
+
+.header-title,
+.footer-title {
+    font-size: 36px;
 }
 
 .footer {
-    border: 1px solid black;
     grid-area: footer;
+    align-items: center;
+    justify-content: center;
 }
 
 .aside {
     grid-area: aside;
+    padding: 23px 5px 0 23px;
+    border: 2px solid black;
+}
+
+.aside-top{
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.aside-title{
+    font-size: 26px;
+    color:#212121;
+}
+
+.aside-title__img{
+    background-image: url("../public/img/arrow.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 35px;
+    height: 35px;
+}
+
+.aside-nav__list-elem:hover > a {
+    color: #818181;
+    border-bottom: 2px dashed #818181;
+}
+
+.aside-nav__list-elem > a {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-style: italic;
+    color: #211212;
+}
+
+.aside-nav__list-elem:not(:last-child) {
+    margin-bottom: 22px;
 }
 
 
-.main{
+.main {
     grid-area: main;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+}
+
+.main-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.main-url {
+    margin-bottom: 30px;
+}
+
+.main__subtitle {
+    text-align: center;
+    font-style: revert;
+    font-weight: 500;
+    font-size: 32px;
+    margin-bottom: 22px;
+}
+
+.main__title {
+    font-weight: 500;
+    font-size: 56px;
+    margin-bottom: 22px;
+}
+
+@media (max-width: 768px) {
+    .main-img {
+        max-width: 125px;
+        height: 125px;
+    }
+
+    .aside-title{
+        font-size: 20px;
+    }
+
+    .main__subtitle{
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 666px) {
+    .main-img {
+        max-width: 105px;
+        height: 105px;
+    }
+
+    .aside-title{
+        font-size: 18px;
+    }
+
+    .main__subtitle{
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-img {
+        max-width:95px;
+        height: 95px;
+    }
+
+    .aside-title{
+        font-size: 16px;
+    }
+
+
+    .main__subtitle{
+        font-size: 18px;
+    }
 }
